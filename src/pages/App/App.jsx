@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
@@ -17,7 +17,7 @@ export default function App() {
             <Routes>
               {/* Route components in here */}
               <Route path="/notes" element={<NoteList user={user}/>}/>
-              
+              <Route path="/*" element={<Navigate to="/notes" />} />
             </Routes>
           </>
           :
