@@ -12,7 +12,7 @@ function handleChange(evt) {
     setNewNote({ ...newNote, [evt.target.name]: evt.target.value });
   }
 
-  function handleSubmit(evt) {
+ function handleSubmit(evt) {
     evt.preventDefault();
     const newNoteData = {...newNote};
     newNoteData.user = user;
@@ -25,7 +25,7 @@ function handleChange(evt) {
         <h1>newnoteform</h1>
         <form onSubmit={handleSubmit}>
         <input name="text" type="textarea"
-        onChange={handleChange} value={NewNoteForm.text} />
+        onChange={handleChange} value={newNote.text} />
         <button type="submit">Add Note</button>
         </form>
         </>
