@@ -1,10 +1,12 @@
 import { useState } from "react";
+// import * as notesAPI from '../../utilities/notes.api'
 
 
-export default function NewNoteForm () {
+export default function NewNoteForm ({user, handleAdd}) {
 const [newNote, setNewNote] = useState({
+    text: '',
 
-})
+});
 
 function handleChange(evt) {
     setNewNote({ ...newNote, [evt.target.name]: evt.target.value });
