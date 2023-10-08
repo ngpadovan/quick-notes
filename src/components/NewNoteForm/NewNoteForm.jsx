@@ -22,7 +22,6 @@ function handleChange(evt) {
 
     return (
         <>
-        <h1>newnoteform</h1>
         <form onSubmit={handleSubmit}>
         <input name="text" type="textarea"
         onChange={handleChange} value={newNote.text} />
